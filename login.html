@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter', sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ffeef4;
+overflow:hidden;
+}
+
+/* LOGIN CARD */
+.login-box{
+background:white;
+padding:40px;
+width:350px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(255,92,147,0.15);
+text-align:center;
+position:relative;
+z-index:10;
+}
+
+.login-box h2{
+margin-bottom:25px;
+font-weight:800;
+color:#ff5c93;
+}
+
+/* INPUT */
+.input-group{
+display:flex;
+margin-bottom:15px;
+}
+
+.input-group span{
+background:#ff5c93;
+color:white;
+padding:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+width:45px;
+border-radius:10px 0 0 10px;
+}
+
+.input-group input{
+flex:1;
+padding:10px;
+border:1px solid #ffd6e4;
+border-left:none;
+border-radius:0 10px 10px 0;
+outline:none;
+}
+
+/* BUTTON */
+.login-btn{
+border:none;
+background:#ff5c93;
+color:white;
+padding:12px;
+width:100%;
+border-radius:30px;
+font-weight:600;
+margin-top:10px;
+cursor:pointer;
+}
+
+.login-btn:hover{
+background:#e14c80;
+}
+
+/* LINKS */
+.links{
+margin-top:15px;
+font-size:14px;
+}
+
+.links a{
+text-decoration:none;
+color:#ff5c93;
+font-weight:600;
+}
+
+/* EMOJI BACKGROUND */
+
+.emoji-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.emoji{
+position:absolute;
+font-size:30px;
+animation:fly 10s linear infinite;
+}
+
+/* RANDOM POSITIONS */
+
+.emoji:nth-child(1){
+left:10%;
+animation-duration:8s;
+}
+
+.emoji:nth-child(2){
+left:25%;
+animation-duration:12s;
+}
+
+.emoji:nth-child(3){
+left:40%;
+animation-duration:10s;
+}
+
+.emoji:nth-child(4){
+left:60%;
+animation-duration:7s;
+}
+
+.emoji:nth-child(5){
+left:75%;
+animation-duration:9s;
+}
+
+.emoji:nth-child(6){
+left:90%;
+animation-duration:11s;
+}
+
+/* ANIMATION */
+
+@keyframes fly{
+
+0%{
+transform:translateY(100vh) rotate(0deg);
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-10vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- EMOJI BACKGROUND -->
+
+<div class="emoji-container">
+<span class="emoji">💖</span>
+<span class="emoji">✨</span>
+<span class="emoji">🌸</span>
+<span class="emoji">💗</span>
+<span class="emoji">🌺</span>
+<span class="emoji">💞</span>
+</div>
+
+<!-- LOGIN BOX -->
+
+<div class="login-box">
+
+<h2>LOG IN</h2>
+
+<div class="input-group">
+<span><i class="fa fa-user"></i></span>
+<input type="text" id="username" placeholder="Username">
+</div>
+
+<div class="input-group">
+<span><i class="fa fa-lock"></i></span>
+<input type="password" id="password" placeholder="Password">
+</div>
+
+<button class="login-btn" onclick="login()">Login</button>
+
+<div class="links">
+<p>Don't have an account? 
+<a href="registration.html">Register</a></p>
+</div>
+
+</div>
+
+<script>
+
+function login(){
+
+let user = document.getElementById("username").value;
+let pass = document.getElementById("password").value;
+
+let correctUser = "Leticia";
+let correctPass = "123";
+
+if(user === correctUser && pass === correctPass){
+
+window.location.href = "welcome.html";
+
+}else{
+
+alert("Wrong username or password");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

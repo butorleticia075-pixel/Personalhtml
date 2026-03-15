@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LETICIA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(135deg,#ead7dd,#fce4ec);
+  color:#1f2933;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:sticky;
+  top:0;
+  background:#ffffffcc;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #ffe0ee;
+  z-index:100;
+}
+
+.menu{
+  display:flex;
+  justify-content:center;   /* center horizontally */
+  align-items:center;       /* center vertically */
+  gap:25px;
+  max-width:1000px;
+  margin:0 auto;
+  padding:15px 20px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:#475569;
+  font-weight:600;
+  font-size:14px;
+  padding:8px 18px;
+  border-radius:999px;
+  transition:.3s ease;
+}
+
+.menu a.active{
+  background:#ffd9e8;
+  color:#ff4f8b;
+}
+
+.menu a:hover{
+  background:#ffe3ef;
+  color:#ff4f8b;
+  transform:scale(1.05);
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+  min-height:90vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+}
+
+/* LOGO */
+.logo{
+  font-size:52px;
+  font-weight:800;
+  color:#ff6fa1;
+  margin-bottom:30px;
+  letter-spacing:2px;
+
+  text-shadow:
+    4px 4px 0px #e64980,
+    10px 10px 25px rgba(0,0,0,0.25);
+
+  animation: floatGlow 3s ease-in-out infinite;
+}
+
+@keyframes floatGlow{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-12px); }
+  100%{ transform:translateY(0); }
+}
+
+/* IMAGE */
+.hero img{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid #fff;
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+  margin-bottom:25px;
+  transition:.3s ease;
+}
+
+.hero img:hover{
+  transform:scale(1.05);
+}
+
+/* TEXT */
+.hero h1{
+  font-size:32px;
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+/* BUTTON */
+.btn{
+  background:#ff6fa1;
+  color:#fff;
+  padding:12px 30px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 10px 20px rgba(255,111,161,.35);
+  transition:.3s ease;
+}
+
+.btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 15px 25px rgba(255,111,161,.45);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+  .menu{
+    flex-wrap:wrap;
+    gap:12px;
+  }
+
+  .logo{
+    font-size:40px;
+  }
+
+  .hero h1{
+    font-size:24px;
+  }
+
+  .hero img{
+    width:150px;
+    height:150px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="menu">
+    <a href="welcome.html" class="active">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="meandmyfriend.html">Photo</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Log out</a>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <div class="logo">LETICIA</div>
+
+  <img src="picko.jpg" alt="Leticia">
+
+  <h1>Hi, my name is Leticia</h1>
+
+  <a href="/my fav.html" class="btn">SEE ALL MY FAVORITE</a>
+
+</section>
+
+</body>
+</html>

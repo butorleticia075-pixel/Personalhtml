@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - Leticia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#ead7dd;
+  color:#1f2933;
+  text-align:center;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:sticky;
+  top:0;
+  background:#ffffffcc;
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid #ffe0ee;
+  z-index:100;
+}
+
+.menu{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  padding:15px 0;
+}
+
+.menu a{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:110px;
+  height:38px;
+  text-decoration:none;
+  color:#475569;
+  font-weight:600;
+  font-size:14px;
+  border-radius:999px;
+  transition:.3s ease;
+}
+
+.menu a.active{
+  background:#ffd9e8;
+  color:#ff4f8b;
+}
+
+.menu a:hover{
+  background:#ffe3ef;
+  color:#ff4f8b;
+  transform:scale(1.05);
+}
+
+/* ===== LOGO TITLE ===== */
+.page-logo{
+  font-size:44px;
+  font-weight:800;
+  color:#ff6fa1;
+  margin-top:40px;
+  letter-spacing:2px;
+
+  text-shadow:
+    4px 4px 0px #e64980,
+    8px 8px 20px rgba(0,0,0,0.25);
+
+  animation: floatGlow 3s ease-in-out infinite;
+}
+
+/* Smooth floating + glow animation */
+@keyframes floatGlow{
+  0%{
+    transform:translateY(0);
+    text-shadow:
+      4px 4px 0px #e64980,
+      8px 8px 20px rgba(0,0,0,0.25);
+  }
+  50%{
+    transform:translateY(-10px);
+    text-shadow:
+      4px 4px 0px #e64980,
+      12px 12px 25px rgba(255,105,180,0.4);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section{
+  padding:40px 20px 80px;
+}
+
+.about-img{
+  margin-top:30px;
+}
+
+.about-img img{
+  width:230px;
+  height:230px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid #fff;
+  box-shadow:0 12px 25px rgba(0,0,0,0.15);
+  transition:.3s ease;
+}
+
+.about-img img:hover{
+  transform:scale(1.05);
+}
+
+.about-section h2{
+  margin-top:40px;
+  font-size:32px;
+  font-weight:800;
+}
+
+.about-section p{
+  max-width:500px;
+  margin:20px auto 0;
+  line-height:1.7;
+  color:#444;
+  font-size:16px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+  .menu{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .page-logo{
+    font-size:36px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="menu">
+    <a href="welcome.html">Home</a>
+    <a href="about.html" class="active">About Me</a>
+    <a href="meandmyfriend.html">Photo</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Log out</a>
+  </nav>
+</header>
+
+<div class="page-logo">LETICIA</div>
+
+<section class="about-section">
+
+  <div class="about-img">
+    <img src="picko.jpg" alt="Leticia">
+  </div>
+
+  <h2>About Me 💗</h2>
+
+  <p>
+    Hi! I'm Leticia, 17 years old. My hobby is singing and dancing. 
+    I really love food trips because I enjoy trying new things. 
+    I also dream of going abroad and living there, especially in Korea 
+    because of its beautiful environment.
+  </p>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Leticia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#fff7fb;
+  color:#1f2933;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:sticky;
+  top:0;
+  background:#ffffffcc;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #ffe0ee;
+}
+
+/* MENU */
+.menu{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  padding:8px 10px;
+}
+
+/* MENU LINKS */
+.menu a{
+  width:90px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  color:#475569;
+  border-radius:999px;
+  transition:.3s ease;
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:50px 20px 80px;
+  max-width:1000px;
+  margin:auto;
+}
+
+/* ===== CARDS ===== */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:18px;
+  box-shadow:0 12px 25px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+  transition:.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.card p{
+  font-size:14px;
+  color:#6b7280;
+}
+
+/* BUTTON */
+.back-btn{
+  display:block;
+  width:160px;
+  margin:40px auto 0;
+  text-align:center;
+  background:#ff6fa1;
+  color:#fff;
+  padding:12px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 10px 20px rgba(255,111,161,.35);
+  transition:.3s ease;
+}
+
+.back-btn:hover{
+  transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="menu">
+    <a href="welcome.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="meandmyfriend.html">Photo</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Log out</a>
+  </nav>
+</header>
+
+<section class="section">
+  <div class="cards">
+
+    <div class="card">
+      <img src="anime.jpg" alt="My Fav Anime">
+      <h3>My Fav Anime</h3>
+      <p>I love watching anime because it's fun and inspiring.</p>
+    </div>
+
+    <div class="card">
+      <img src="cat.jpg" alt="My Ideal Cat">
+      <h3>My Ideal Cat</h3>
+      <p>I want a cute and fluffy cat in the future.</p>
+    </div>
+
+    <div class="card">
+      <img src="miya.jpg" alt="Favorite Hero">
+      <h3>My Favorite Hero in ML</h3>
+      <p>Miya is my favorite hero because she is strong and fast.</p>
+    </div>
+
+    <div class="card">
+      <img src="food.jpg" alt="Food Trip">
+      <h3>Food Trip</h3>
+      <p>I love trying different kinds of food.</p>
+    </div>
+
+    <div class="card">
+      <img src="Korea.jpg" alt="Dream Country">
+      <h3>Dream Country</h3>
+      <p>I dream of visiting Korea someday.</p>
+    </div>
+
+    <div class="card">
+      <img src="music.jpg" alt="Singing and Dancing">
+      <h3>Singing & Dancing</h3>
+      <p>Music makes me happy and confident.</p>
+    </div>
+
+    <div class="card">
+      <img src="friend.jpg" alt="Me and My Friend">
+      <h3>Me and My Friend</h3>
+    </div>
+
+  </div>
+
+  <a href="welcome.html" class="back-btn">Back to Home</a>
+
+</section>
+
+</body>
+</html>
